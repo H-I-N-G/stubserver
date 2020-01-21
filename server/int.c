@@ -234,6 +234,12 @@ void ClientCommand( edict_t *cl )
 
 }
 
+void PlayerCustomization( edict_t *pEntity, void *pCustom )
+{
+
+}
+
+
 #define F(x) serverfuncs->x = x
 EXPORT void GetEntityAPI2( serverfuncs_t *serverfuncs, int *version )
 {
@@ -270,4 +276,5 @@ EXPORT void GetEntityAPI2( serverfuncs_t *serverfuncs, int *version )
     F(SetupVisibility);
     F(AddToFullPack);
     F(ClientCommand);
+    F(PlayerCustomization);
 }
